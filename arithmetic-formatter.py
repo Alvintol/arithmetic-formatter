@@ -1,4 +1,6 @@
 def formatter(list, answers = False) :
+  answers = ''
+  
   for item in list :
     splitItem = item.split()
     print(f'{splitItem[0]}\n{splitItem[1]} {splitItem[2]}\n------')
