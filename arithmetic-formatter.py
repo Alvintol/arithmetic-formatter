@@ -15,13 +15,14 @@ def formatter(list, answers = False) :
   for item in list :
     splitItem = item.split()
     
-    if splitItem[1] == '+' :
-      try : answer = isAddition(splitItem[0], splitItem[2])
-      except : print('NUMBER NOT PROVIDED')
-    
-    if splitItem[1] == '-' :
-      try : answer = isAddition(splitItem[0], splitItem[2])
-      except : print('NUMBER NOT PROVIDED')
+    if answers :  
+      if splitItem[1] == '+' :
+        try : answer = isAddition(splitItem[0], splitItem[2])
+        except : print('NUMBER NOT PROVIDED')
+      
+      if splitItem[1] == '-' :
+        try : answer = isAddition(splitItem[0], splitItem[2])
+        except : print('NUMBER NOT PROVIDED')
     
     print('{:>7}\n{:<3}{:>4}\n{:^7}\n{:>7}\n'.format(splitItem[0], splitItem[1], splitItem[2], '-------', answer))
 
