@@ -23,7 +23,7 @@ def formatter(list, answers = False) :
       try : answer = isAddition(splitItem[0], splitItem[2])
       except : print('NUMBER NOT PROVIDED')
     
-    print(f'{splitItem[0]}\n{splitItem[1]} {splitItem[2]}\n-------\n{answer}\n')
+    print('{:>7}\n{:<3}{:>4}\n{:^7}\n{:>7}\n'.format(splitItem[0], splitItem[1], splitItem[2], '-------', answer))
 
 formatter(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
 formatter(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True)
