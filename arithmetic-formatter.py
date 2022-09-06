@@ -1,8 +1,12 @@
 from ast import Num
 
 
+def isAddition(one, two) :
+  try : return int(one) + int(two)
+  except : print('Not a number')
+
 def formatter(list, answers = False) :
-  answers = ''
+  answer = ''
   
   for item in list :
     splitItem = item.split()
