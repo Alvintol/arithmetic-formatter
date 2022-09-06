@@ -3,7 +3,11 @@ from ast import Num
 
 def isAddition(one, two) :
   try : return int(one) + int(two)
-  except : print('Not a number')
+  except : False
+
+def isSubtraction(one, two) :
+  try : return int(one) - int(two)
+  except : return False
 
 def formatter(list, answers = False) :
   answer = ''
