@@ -16,7 +16,12 @@ def formatter(list, answers = False) :
     splitItem = item.split()
     
     if splitItem[1] == '+' :
-      answers = int(splitItem[0]) + int(splitItem[2])
+      try : isAddition(splitItem[0], splitItem[2])
+      except : print('NOT A NUMBER')
+    
+    if splitItem[1] == '-' :
+      try : isAddition(splitItem[0], splitItem[2])
+      except : print('NOT A NUMBER')
     
     print(f'{splitItem[0]}\n{splitItem[1]} {splitItem[2]}\n-------\n{answers}\n')
 
